@@ -1,7 +1,9 @@
+
 <div class="post">
   <div class="post-heading">
     <div class="post-title">
-      {{p.subject}}
+      <a href="/blog/{{p.key().id()}}">{{p.subject}}</a>
+      - by {{p.author.name}}
     </div>
 
     <div class="post-date">
@@ -12,4 +14,15 @@
   <div class="post-content">
     {{p._render_text | safe}}
   </div>
+  <div>
+  
+     
+  <!-- {% if self.user %}
+    {% if self.user.key() == p.author.key() %}
+      <a href="/blog/{{p.key().id()}}/edit">Edit</a>
+    {% endif %}
+  {% endif %} -->
+  
+  </div>
 </div>
+

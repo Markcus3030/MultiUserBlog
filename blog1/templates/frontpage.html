@@ -3,7 +3,12 @@
 {% block content %}
 
   {% for p in posts %}
-    {{ p.render() | safe }}
+  	<div>
+    	{{ p.render() | safe }}
+    	<!-- {% if user.key() == p.author.key() %} -->
+	   		<!-- <a href="/blog/{{p.key().id()}}/edit">Edit</a> -->
+	   <!-- 	{% endif %} -->
+    </div>
     <br><br>
   {% endfor %}
 
